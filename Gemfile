@@ -30,6 +30,9 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 # Authentication and Authorization
 gem 'devise'
+gem 'authority'
+gem 'rolify'
+
 # Bootstrap views for devise
 gem 'devise-bootstrap-views'
 
