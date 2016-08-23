@@ -5,6 +5,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  has_many :referrals
+
+  # TODO
   # validates_acceptance_of :terms_and_conditions, on: :create, accept: '1'
 
   validates :name, :surname, :document_id, :email, presence: true

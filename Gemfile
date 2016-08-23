@@ -36,6 +36,9 @@ gem 'rolify'
 # Bootstrap views for devise
 gem 'devise-bootstrap-views'
 
+# Easier forms
+gem 'simple_form'
+
 # Handles soft deletions
 gem 'paranoia'
 # Use Capistrano for deployment

@@ -19,8 +19,10 @@ Rails.application.routes.draw do
                  sign_up: 'signup'
              }
 
-  root to: 'referrers#index'
+  root to: 'referral#new'
 
-  #TODO: Usuarios pueden registrarse automaticamente sin autorizacion del administrador. Arreglar.
+  resource :users do
+    resource :referral
+  end
 
 end
