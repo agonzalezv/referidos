@@ -10,7 +10,7 @@ class ReferralController < ApplicationController
 
   def new
     @user = current_user
-    @referral = @user.build_referral
+    @referral = @user.referrals.build
   end
 
   def create

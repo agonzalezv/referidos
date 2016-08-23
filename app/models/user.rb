@@ -6,6 +6,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :referrals
+  accepts_nested_attributes_for :referrals
 
   # TODO
   # validates_acceptance_of :terms_and_conditions, on: :create, accept: '1'

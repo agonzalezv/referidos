@@ -61,6 +61,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   # Debuging like a pro
   gem 'better_errors'
+
+  # Mails on browser
+  gem "letter_opener", :group => :development
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
