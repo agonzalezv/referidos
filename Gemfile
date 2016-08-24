@@ -39,6 +39,9 @@ gem 'devise-bootstrap-views'
 # Easier forms
 gem 'simple_form'
 
+# Easier responses
+gem 'responders'
+
 # Handles soft deletions
 gem 'paranoia'
 # Use Capistrano for deployment
@@ -63,7 +66,7 @@ group :development do
   gem 'better_errors'
 
   # Mails on browser
-  gem "letter_opener", :group => :development
+  gem 'letter_opener', :group => :development
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -19,10 +19,10 @@ Rails.application.routes.draw do
                  sign_up: 'signup'
              }
 
-  root to: 'referral#new'
+  root to: 'referrals#new'
 
   resource :users do
-    resource :referral
+    resource :referrals
   end
 
 end

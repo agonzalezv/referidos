@@ -1,0 +1,20 @@
+<% #TODO: Make shared layouts %>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Refer someone</h3>
+  </div>
+  <div class="panel-body">
+    <%= simple_form_for [:users, @referral] do |f| %>
+        <%= render 'shared/messages', flash: flash %>
+        <%= f.input :name %>
+        <%= f.input :surname %>
+        <%= f.input :document_id %>
+        <%= f.input :email %>
+        <%= f.input :phone %>
+        <%= f.input :mobile %>
+        <%= f.input :city %>
+        <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
