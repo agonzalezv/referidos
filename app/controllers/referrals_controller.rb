@@ -1,12 +1,13 @@
 class ReferralsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user
-  before_action :set_referral, only: [:show,:edit]
+  before_action :set_referral, only: [:edit]
 
   def index
   end
 
   def show
+    @referrals = @user.referrals.all
   end
 
   def new
@@ -16,7 +17,7 @@ class ReferralsController < ApplicationController
   def create
     @referral = @user.referrals.build(referral_params)
     flash[:notice] = 'Referral was created.' if @referral.save
-    respond_with @referral, location: -> { root_path } #TODO: Temporary
+    respond_with @referral, location: -> { users_referral_path } #TODO: Temporary
   end
 
   private

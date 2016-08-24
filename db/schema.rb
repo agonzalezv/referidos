@@ -10,22 +10,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160823202523) do
+ActiveRecord::Schema.define(version: 20160824091743) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "referrals", force: :cascade do |t|
-    t.string   "name",        null: false
-    t.string   "surname",     null: false
-    t.string   "document_id", null: false
-    t.string   "email",       null: false
+    t.string   "name",                        null: false
+    t.string   "surname",                     null: false
+    t.string   "document_id",                 null: false
+    t.string   "email",                       null: false
     t.string   "city"
     t.string   "phone"
     t.string   "mobile"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
     t.integer  "user_id"
+    t.string   "status",      default: "new", null: false
     t.index ["user_id"], name: "index_referrals_on_user_id", using: :btree
   end
 
