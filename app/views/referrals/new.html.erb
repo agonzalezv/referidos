@@ -1,9 +1,11 @@
+<% #TODO : Terms & Conditions %>
+
 <% content_for :panel_title do %>
     Refer someone
 <% end %>
 
 <% content_for :panel_body do %>
-  <%= simple_form_for [:users, @referral] do |f| %>
+  <%= simple_form_for [:users, @referral], html: {class: 'form-horizontal' }, wrapper: :horizontal_form do |f| %>
     <%= render 'shared/messages', flash: flash %>
     <%= f.input :name %>
     <%= f.input :surname %>

@@ -1,11 +1,19 @@
-<% return unless content_for? :panel_title %>
-<div class="panel panel-default">
-  <div class="panel-heading">
-    <h3 class="panel-title">
-      <%= yield :panel_title %>
-    </h3>
-  </div>
-  <div class="panel-body">
-    <%= yield :panel_body %>
+<% return unless content_for? :panel_body %>
+<div class="row">
+  <div class="col-lg-12">
+    <div class="panel panel-default">
+      <% if content_for? :panel_title %>
+        <div class="panel-heading">
+          <h3 class="panel-title">
+            <%= yield :panel_title %>
+          </h3>
+        </div>
+      <% end %>
+      <div class="panel-body">
+        <% if content_for? :panel_body %>
+        <%= yield :panel_body %>
+        <% end %>
+      </div>
+    </div>
   </div>
 </div>
