@@ -5,29 +5,69 @@
 <% end %>
 
 <% content_for :panel_body do %>
-  <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-    <%= f.input :name, autofocus: true, required: 'required' %>
-    <%= f.input :surname, autofocus: true, required: 'required' %>
-    <%= f.input :gender, collection: GENDERS, :include_blank => false %>
-    <%= f.input :marital_status, collection: MARITAL_STATUSES, :include_blank => false %>
-    <%= f.input :date_of_birth, as: :date, start_year: Date.today.year, end_year: Date.today.year - 100, order: [:day, :month, :year] %>
-    <%= f.input :document_id, autofocus: true, required: 'required' %>
-    <%= f.input :email, autofocus: true, required: 'required' %>
-    <%= f.input :secondary_email, autofocus: true %>
-    <%= f.input :city, collection: CITIES, :include_blank => false %>
-    <%= f.input :phone  %>
-    <%= f.input :address  %>
-    <%= f.input :mobile  %>
-    <%= f.input :bank_department, collection: BANK_DEPARTMENTS, :include_blank => false %>
-    <%= f.input :occupation %>
-    <%= f.input :number_of_children, value: 0 %>
-    <%= f.input :password, required: 'required' %>
-    <%= f.input :password_confirmation, required: 'required' %>
-    <%= f.input :preferences, collection: USER_PREFERENCES, input_html: { multiple: true }, :include_blank => false, :include_hidden => false %>
-    <%= f.submit t('.sign_up', :default => "Sign up"), class: "btn btn-primary" %>
+  <%= simple_form_for(resource, :as => resource_name, :url => registration_path(resource_name))  do |f| %>
+
+    <div class="row">
+    <div class="col-lg-6"><%= f.input :name, autofocus: true, required: 'required' %></div>
+    <div class="col-lg-6"><%= f.input :surname, autofocus: true, required: 'required' %></div>
+    </div>
+
+    <div class="row">
+    <div class="col-lg-6"><%= f.input :document_id, autofocus: true, required: 'required' %></div>
+    <div class="col-lg-6"><%= f.input :date_of_birth, as: :date, start_year: Date.today.year, end_year: Date.today.year - 100, order: [:day, :month, :year] %></div>
+    </div>
+
+    <div class="row">
+    <div class="col-lg-6"><%= f.input :email, autofocus: true, required: 'required' %></div>
+    <div class="col-lg-6"><%= f.input :secondary_email, autofocus: true %></div>
+    </div>
+
+    <div class="row">
+    <div class="col-lg-6"><%= f.input :gender, collection: GENDERS, :include_blank => false %></div>
+    <div class="col-lg-3"><%= f.input :marital_status, collection: MARITAL_STATUSES, :include_blank => false %></div>
+    <div class="col-lg-3"><%= f.input :number_of_children, value: 0 %></div>
+    </div>
+
+    <div class="row">
+    <div class="col-lg-6"><%= f.input :address  %></div>
+    <div class="col-lg-6"><%= f.input :city, collection: CITIES, :include_blank => false %></div>
+    </div>
+
+    <div class="row">
+    <div class="col-lg-6"><%= f.input :phone  %></div>
+    <div class="col-lg-6"><%= f.input :mobile  %></div>
+    </div>
+
+    <div class="row">
+    <div class="col-lg-6"><%= f.input :occupation %></div>
+    <div class="col-lg-6"><%= f.input :bank_department, collection: BANK_DEPARTMENTS, :include_blank => false %></div>
+    </div>
+
+    <div class="row">
+    <div class="col-lg-6"><%= f.input :password, required: 'required' %></div>
+    <div class="col-lg-6"><%= f.input :password_confirmation, required: 'required' %></div>
+    </div>
+
+    <div class="row">
+    <div class="col-lg-12">
+    <%= f.input :preferences, collection: USER_PREFERENCES, as: :check_boxes, wrapper: :vertical_radio_and_checkboxes, include_hidden: false %>
+    </div>
+    </div>
+
+    <div class="row">
+    <div class="col-lg-12">
+      <%= f.submit t('.sign_up', :default => "Sign up"), class: 'btn btn-warning' %>
+    </div>
+    </div>
+
   <% end %>
+
   <hr/>
-  <%= render "devise/shared/links" %>
+
+  <div class="col-lg-12">
+    <%= render "devise/shared/links" %>
+  </div>
+
 <% end %>
 
 

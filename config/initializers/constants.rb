@@ -1,4 +1,6 @@
-CITIES = %w(Bogota Medellin Cali Barranquilla)
+CITIES = ['Armenia','Barranquilla','Bogotá','Bucaramanga','Cali','Cartagena','Cúcuta','Envigado',
+          'Ibagué','Ipiales','Itagüí','Manizales','Medellín','Montería','Neiva','Pasto',
+          'Pereira', 'San Gil', 'Tunja', 'Zapatoca']
 
 BANK_DEPARTMENTS = %w(Ventas Cartera)
 
@@ -6,4 +8,4 @@ USER_PREFERENCES = ['Cultura','Musica','Arte','Atletismo','Golf','Futbol','Tecno
 
 GENDERS = %w(Masculino Femenino)
 
-MARITAL_STATUSES = %w(Casado Soltero)
+MARITAL_STATUSES = %w(Soltero Casado)

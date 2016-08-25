@@ -39,13 +39,13 @@ es:
           date_of_birth: Fecha de Nacimiento
           document_id: Documento de identidad
           email: Correo
-          secondary_email: Otro Correo
+          secondary_email: Correo Secundario
           city: Ciudad
-          phone: Telefono
+          phone: Telefono Fijo
           address: Direccion
-          mobile: Celular
-          bank_department: Area
-          occupation: Ocupación
+          mobile: Telefono Celular
+          bank_department: Dependencia del banco
+          occupation: Profesión
           marital_status: Estado Civil
           preferences: Preferencias
           remember_me: Recordarme
@@ -69,13 +69,13 @@ es:
             date_of_birth: Fecha de Nacimiento
             document_id: Documento de identidad
             email: Correo
-            secondary_email: Otro Correo
+            secondary_email: Correo Secundario
             city: Ciudad
-            phone: Telefono
+            phone: Telefono Fijo
             address: Direccion
-            mobile: Celular
-            bank_department: Area
-            occupation: Ocupación
+            mobile: Telefono Celular
+            bank_department: Dependencia del banco
+            occupation: Profesión
             marital_status: Estado Civil
             preferences: Preferencias
             remember_me: Recordarme
