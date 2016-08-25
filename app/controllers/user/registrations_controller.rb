@@ -1,7 +1,6 @@
 class User::RegistrationsController < Devise::RegistrationsController
   before_action :configure_sign_up_params, only: [:create]
   before_action :configure_account_update_params, only: [:update]
-  before_action :get_areas_and_cities
 
   # GET /resource/sign_up
   def new
@@ -39,14 +38,25 @@ class User::RegistrationsController < Devise::RegistrationsController
 
   protected
 
-  def get_areas_and_cities
-    @cities =  { Bogota: :bogota, Medellin: :medellin }
-    @bank_departments = { Marketing: :marketing, Ventas: :ventas }
-  end
-
   # If you have extra params to permit, append them to the sanitizer.
   def configure_sign_up_params
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name,:surname,:document_id,:city,:phone,:bank_department])
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name,
+                                                       :surname,
+                                                       :gender,
+                                                       :date_of_birth,
+                                                       :document_id,
+                                                       :email,
+                                                       :secondary_email,
+                                                       :city,
+                                                       :phone,
+                                                       :address,
+                                                       :mobile,
+                                                       :bank_department,
+                                                       :occupation,
+                                                       :marital_status,
+                                                       :preferences => []
+    ])
+
   end
 
   # If you have extra params to permit, append them to the sanitizer.
