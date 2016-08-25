@@ -28,6 +28,60 @@ es:
           has_one: No se puede eliminar el registro porque existe un %{record} dependiente
           has_many: No se puede eliminar el registro porque existen %{record} dependientes
 
+  simple_form:
+      labels:
+        defaults:
+          username: Usuario
+          password: Contraseña
+          name: Nombre
+          surname: Apellidos
+          gender: Genero
+          date_of_birth: Fecha de Nacimiento
+          document_id: Documento de identidad
+          email: Correo
+          secondary_email: Otro Correo
+          city: Ciudad
+          phone: Telefono
+          address: Direccion
+          mobile: Celular
+          bank_department: Area
+          occupation: Ocupación
+          marital_status: Estado Civil
+          preferences: Preferencias
+          remember_me: Recordarme
+          password: Contraseña
+          password_confirmation: Confirme su contraseña
+          number_of_children: Numero de hijos
+          new:
+            username: Elija un nombre de usuario
+      hints:
+        defaults:
+          username: Usuario
+          password: 6 caracteres o más
+      placeholders:
+        defaults:
+          username: Usuario
+          password: Contraseña
+          new:
+            name: Nombre
+            surname: Apellidos
+            gender: Genero
+            date_of_birth: Fecha de Nacimiento
+            document_id: Documento de identidad
+            email: Correo
+            secondary_email: Otro Correo
+            city: Ciudad
+            phone: Telefono
+            address: Direccion
+            mobile: Celular
+            bank_department: Area
+            occupation: Ocupación
+            marital_status: Estado Civil
+            preferences: Preferencias
+            remember_me: Recordarme
+            password: Contraseña
+            password_confirmation: Confirme su contraseña
+            number_of_children: 0
   name: Nombre
   surname: Apellidos
   gender: Genero

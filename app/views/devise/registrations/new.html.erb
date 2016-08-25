@@ -20,6 +20,7 @@
     <%= f.input :mobile  %>
     <%= f.input :bank_department, collection: BANK_DEPARTMENTS, :include_blank => false %>
     <%= f.input :occupation %>
+    <%= f.input :number_of_children, value: 0 %>
     <%= f.input :password, required: 'required' %>
     <%= f.input :password_confirmation, required: 'required' %>
     <%= f.input :preferences, collection: USER_PREFERENCES, input_html: { multiple: true }, :include_blank => false, :include_hidden => false %>

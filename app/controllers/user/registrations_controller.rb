@@ -54,6 +54,7 @@ class User::RegistrationsController < Devise::RegistrationsController
                                                        :bank_department,
                                                        :occupation,
                                                        :marital_status,
+                                                       :number_of_children,
                                                        :preferences => []
     ])
 

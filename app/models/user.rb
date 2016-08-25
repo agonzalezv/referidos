@@ -5,11 +5,18 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
+
+  # TODO: Temporary
+  def confirmation_required?
+    false
+  end
+
   has_many :referrals
   accepts_nested_attributes_for :referrals
 
   # TODO: custom validation against DB table
-  # TODO: configure mailer
+
+  # TODO: configure mailers
 
   validates :name, :surname, :document_id, :email, presence: true
   validates :email, :document_id, uniqueness: true
