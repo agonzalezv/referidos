@@ -5,7 +5,6 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable, :confirmable,
          :recoverable, :rememberable, :trackable, :validatable
 
-
   # TODO: Temporary
   def confirmation_required?
     false
@@ -20,6 +19,7 @@ class User < ApplicationRecord
 
   validates :name, :surname, :document_id, :email, presence: true
   validates :email, :document_id, uniqueness: true
+  validates :document_id, numericality: { only_integer: true } #TODO: Allow letters too
 
   # after_create :send_admin_mail
   # def send_admin_mail

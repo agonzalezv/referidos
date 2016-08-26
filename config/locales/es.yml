@@ -86,9 +86,10 @@ es:
   surname: Apellidos
   gender: Genero
   date_of_birth: Fecha de Nacimiento
-  document_id: Documento
+  document_id: Documento de identidad
+  alnum_only: solo permite números y letras
   email: Correo
-  secondary_email: Otro Correo
+  secondary_email: Correo Secundario
   city: Ciudad
   phone: Telefono
   address: Direccion
