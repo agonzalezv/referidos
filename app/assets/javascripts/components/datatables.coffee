@@ -1,2 +1,6 @@
 $(document).on 'turbolinks:load', ->
-  $('#datatable').DataTable()
+  $('#datatable').DataTable({
+    "language": {
+      "url": "/datatables-spanish.lang"
+    }
+  })

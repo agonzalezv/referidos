@@ -2,6 +2,7 @@ class ReferralsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_user
   before_action :set_referral, only: [:edit]
+  respond_to :html
 
   def index
   end
@@ -16,8 +17,7 @@ class ReferralsController < ApplicationController
 
   def create
     @referral = @user.referrals.build(referral_params)
-    flash[:notice] = 'Referral was created.' if @referral.save
-    respond_with @referral, location: -> { users_referral_path } #TODO: Temporary
+    respond_with @referral, location: -> { users_referrals_path }
   end
 
   private
@@ -33,7 +33,8 @@ class ReferralsController < ApplicationController
   def referral_params
     params.require(:referral).permit(:name, :surname, :document_id,
                                      :email,:city,:phone, :mobile,
-                                     :created_at,:updated_at,:user_id)
+                                     :created_at,:updated_at,:user_id,
+                                     :terms_and_conditions)
   end
 
 

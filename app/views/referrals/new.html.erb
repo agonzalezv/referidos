@@ -1,7 +1,5 @@
-<% #TODO : Terms & Conditions %>
-
 <% content_for :panel_title do %>
-    Refer someone
+    <%= t('new_referral') %>
 <% end %>
 
 <% content_for :panel_body do %>
@@ -14,6 +12,15 @@
     <%= f.input :phone %>
     <%= f.input :mobile %>
     <%= f.input :city %>
-    <%= f.button :submit %>
+    <%= f.input :terms_and_conditions, as: :boolean, wrapper: :horizontal_radio_and_checkboxes,
+      label: "<span><u> #{t('simple_form.labels.defaults.terms_and_conditions')}</u></span>".html_safe,
+      label_html: {
+        "data-placement"=>"bottom",
+        "data-toggle" => "popover" ,
+        "title" =>"Terminos y Condiciones" ,
+        "data-content" =>"Al referir un amigo autorizo a Banco Pichincha a ingresar sus datos en nuestra base de datos de prospectos"
+      }
+    %>
+    <%= f.button :submit, t('refer'), class: 'btn btn-warning center-block'  %>
   <% end %>
 <% end %>
