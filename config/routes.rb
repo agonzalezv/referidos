@@ -19,12 +19,9 @@ Rails.application.routes.draw do
                  sign_up: 'signup'
              }
 
-  # root to: 'referrals#new'
-
-  root to: 'static_pages#show', page: 'home'
+  root to: 'referrals#new'
 
   get '/static/:page' => 'static_pages#show'
-
 
   resource :users do
     resource :referrals
