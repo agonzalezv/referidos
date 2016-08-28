@@ -9,7 +9,6 @@ class Referral < ApplicationRecord
   validates :email, :document_id, uniqueness: true
 
   #TODO: Configure mailer
-  #TODO: email and documentID are unique
 
   # after_create :send_admin_mail
   # def send_admin_mail

@@ -17,6 +17,7 @@ class ReferralsController < ApplicationController
 
   def create
     @referral = @user.referrals.build(referral_params)
+    @referral.save
     respond_with @referral, location: -> { users_referrals_path }
   end
 
