@@ -62,10 +62,10 @@ es:
         new_password: Nueva contraseña
       new:
         forgot_your_password: "¿Ha olvidado su contraseña?"
-        send_me_reset_password_instructions: Envíeme las instrucciones para resetear mi contraseña
-      no_token: No puedes acceder a esta página si no es a través de un enlace para resetear tu contraseña. Si has llegado hasta aquí desde el email para resetear tu contraseña, por favor asegúrate de que la URL introducida está completa.
-      send_instructions: Recibirás un correo con instrucciones sobre cómo resetear tu contraseña en unos pocos minutos.
-      send_paranoid_instructions: Si tu correo existe en nuestra base de datos, recibirás un correo con instrucciones sobre cómo resetear tu contraseña en tu bandeja de entrada.
+        send_me_reset_password_instructions: Envíeme las instrucciones para recuperar mi contraseña
+      no_token: No puedes acceder a esta página si no es a través de un enlace para recuperar tu contraseña. Si has llegado hasta aquí desde el email para recuperar tu contraseña, por favor asegúrate de que la URL introducida está completa.
+      send_instructions: Recibirás un correo con instrucciones sobre cómo recuperar tu contraseña en unos pocos minutos.
+      send_paranoid_instructions: Si tu correo existe en nuestra base de datos, recibirás un correo con instrucciones sobre cómo recuperar tu contraseña en tu bandeja de entrada.
       updated: Se ha cambiado tu contraseña. Ya iniciaste sesión.
       updated_not_active: Tu contraseña fue cambiada.
     registrations:
@@ -74,7 +74,7 @@ es:
         are_you_sure: "¿Está usted seguro?"
         cancel_my_account: Anular mi cuenta
         currently_waiting_confirmation_for_email: 'Actualmente esperando la confirmacion de: %{email} '
-        leave_blank_if_you_don_t_want_to_change_it: dejar en blanco si no desea cambiarlo
+        leave_blank_if_you_don_t_want_to_change_it: dejar en blanco si no desea cambiarla
         title: Editar %{resource}
         unhappy: Infeliz
         update: Actualizar
@@ -86,7 +86,7 @@ es:
       signed_up_but_locked: Tu cuenta ha sido creada correctamente. Sin embargo, no hemos podido iniciar la sesión porque que tu cuenta está bloqueada.
       signed_up_but_unconfirmed: Se ha enviado un mensaje con un enlace de confirmación a tu correo electrónico. Abre el enlace para activar tu cuenta.
       update_needs_confirmation: Has actualizado tu cuenta correctamente, pero es necesario confirmar tu nuevo correo electrónico. Por favor, comprueba tu correo y sigue el enlace de confirmación para finalizar la comprobación del nuevo correo electrónico.
-      updated: Tu cuenta se ha actualizada.
+      updated: Tu información fue actualizada exitosamente.
     sessions:
       already_signed_out: Sesión finalizada.
       new:
@@ -95,7 +95,7 @@ es:
       signed_out: Sesión finalizada.
     shared:
       links:
-        back: Atrás
+        back: Volver
         didn_t_receive_confirmation_instructions: "¿No ha recibido las instrucciones de confirmación?"
         didn_t_receive_unlock_instructions: "¿No ha recibido instrucciones para desbloquear?"
         forgot_your_password: "¿Ha olvidado su contraseña?"

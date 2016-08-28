@@ -1,15 +1,17 @@
 <% content_for :panel_title do %>
-    My referrals
+    <%= t('my_referrals') %>
 <% end %>
 
 <% content_for :panel_body do %>
-  <table class="table table-responsive table-striped table-hover" id="datatable">
+    <%= render 'shared/messages', flash: flash %>
+
+    <table class="table table-responsive table-striped table-hover" id="datatable">
     <thead>
     <tr>
-      <th>Name</th>
-      <th>Surname</th>
-      <th>Status</th>
-      <th>Referred on</th>
+      <th><%= t('name') %></th>
+      <th><%= t('surname') %></th>
+      <th><%= t('status') %></th>
+      <th><%= t('referred_on') %></th>
     </tr>
     </thead>
     <tbody>

@@ -4,11 +4,11 @@
     <% if @event.try(:errors).try(:any?) %>
       <ul class="list-unstyled">
         <% @event.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
+          <li><%= t(message) %></li>
         <% end %>
       </ul>
     <% else %>
-      <%= message %>
+      <%= t(message) %>
     <% end %>
   </div>
 <% end %>
